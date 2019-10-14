@@ -1,0 +1,51 @@
+{
+    "env": {
+        "test": {
+            "plugins": [
+                "@babel/plugin-transform-modules-commonjs",
+                "@babel/plugin-proposal-class-properties"
+            ],
+            "presets": [
+                ["@babel/preset-env", { "useBuiltIns": "usage", "debug": true, "corejs": 3 }],
+                "@babel/preset-react",
+                "@babel/preset-typescript"
+            ]
+        },
+        "production": {
+            "plugins": [
+                "@babel/plugin-syntax-dynamic-import",
+                "@babel/proposal-class-properties",
+                "@babel/proposal-object-rest-spread",
+                "@babel/plugin-transform-object-assign"
+            ],
+            "presets": [
+                [
+                    "@babel/preset-env", {
+                        "modules": false,
+                        "useBuiltIns": "usage"
+                    }
+                ],
+                "@babel/preset-react",
+                "@babel/preset-typescript"
+            ]
+        },
+        "development": {
+            "plugins": [
+                "@babel/plugin-syntax-dynamic-import",
+                "@babel/proposal-class-properties",
+                "@babel/proposal-object-rest-spread",
+                "@babel/plugin-transform-object-assign"
+            ],
+            "presets": [
+                [
+                    "@babel/preset-env", {
+                        "modules": false,
+                        "useBuiltIns": "usage"
+                    }
+                ],
+                "@babel/preset-react",
+                "@babel/preset-typescript"
+            ]
+        }
+    }
+}
